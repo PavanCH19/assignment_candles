@@ -201,28 +201,116 @@ GET http://localhost:8080/api/v1/candles?symbol=TCS&timeFrame=5m&startDate=2026-
 ## Project Structure
 
 ```text
-controller
-├── candlestickController
-
-service
-├── CandleService
-├── CandleServiceImpl
-
-repository
-├── StockDataRepository
-
-entity
-├── StockData
-
-dto
-├── CandleDto
-├── CandleResponseDto
-
-utility
-├── load_data
-
-exception
-├── GlobalExceptionHandler
+C:.
+│   .gitattributes
+│   .gitignore
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│   readme.md
+│   
+├───.idea
+│       .gitignore
+│       compiler.xml
+│       encodings.xml
+│       jarRepositories.xml
+│       misc.xml
+│       vcs.xml
+│       workspace.xml
+│       
+├───.mvn
+│   └───wrapper
+│           maven-wrapper.properties
+│           
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───example
+│   │   │           └───assignment
+│   │   │               │   AssignmentApplication.java
+│   │   │               │   
+│   │   │               ├───config
+│   │   │               │       RedisConfig.java
+│   │   │               │       
+│   │   │               ├───controller
+│   │   │               │       candlestickController.java
+│   │   │               │       
+│   │   │               ├───dto
+│   │   │               │       CandleDto.java
+│   │   │               │       CandleReqDto.java
+│   │   │               │       CandleResponseDto.java
+│   │   │               │       PageResponseDto.java
+│   │   │               │       
+│   │   │               ├───entity
+│   │   │               │       StockData.java
+│   │   │               │       
+│   │   │               ├───repo
+│   │   │               │       StockDataRepository.java
+│   │   │               │       
+│   │   │               ├───service
+│   │   │               │   │   CandleService.java
+│   │   │               │   │   
+│   │   │               │   └───impl
+│   │   │               │           CandleServiceImpl.java
+│   │   │               │           
+│   │   │               └───Utility
+│   │   │                       GlobalExceptionHandler.java
+│   │   │                       load_data.java
+│   │   │                       stock_data.csv
+│   │   │                       
+│   │   └───resources
+│   │       │   application.properties
+│   │       │   
+│   │       ├───static
+│   │       └───templates
+│   └───test
+│       └───java
+│           └───com
+│               └───example
+│                   └───assignment
+│                           AssignmentApplicationTests.java
+│                           
+└───target
+    ├───classes
+    │   │   application.properties
+    │   │   
+    │   └───com
+    │       └───example
+    │           └───assignment
+    │               │   AssignmentApplication.class
+    │               │   
+    │               ├───config
+    │               │       RedisConfig.class
+    │               │       
+    │               ├───controller
+    │               │       candlestickController.class
+    │               │       
+    │               ├───dto
+    │               │       CandleDto.class
+    │               │       CandleReqDto.class
+    │               │       CandleResponseDto.class
+    │               │       PageResponseDto.class
+    │               │       
+    │               ├───entity
+    │               │       StockData.class
+    │               │       
+    │               ├───repo
+    │               │       StockDataRepository.class
+    │               │       
+    │               ├───service
+    │               │   │   CandleService.class
+    │               │   │   
+    │               │   └───impl
+    │               │           CandleServiceImpl.class
+    │               │           
+    │               └───Utility
+    │                       GlobalExceptionHandler.class
+    │                       load_data.class
+    │                       
+    └───generated-sources
+        └───annotations
 ```
 
 ---
