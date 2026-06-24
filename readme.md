@@ -310,7 +310,7 @@ C:.
     │                       load_data.class
     │                       
     └───generated-sources
-        └───annotations
+        └───annotation
 ```
 
 ---
